@@ -1,14 +1,14 @@
 import { useCurrentQuery } from '../../app/services/auth';
 
 type Props = {
-    children: JSX.Element;
+	children: JSX.Element;
 };
 
 export const Auth = ({ children }: Props) => {
-    const { isLoading } = useCurrentQuery();
+	const { isLoading } = useCurrentQuery();
 
-    if(isLoading) {
-        return <span>Загрузка</span>
-    }
-    return children;
+	if (isLoading) {
+		return <span>Загрузка</span>;
+	}
+	return children;
 };
